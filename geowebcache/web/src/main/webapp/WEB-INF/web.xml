@@ -7,7 +7,12 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>/WEB-INF/geowebcache-servlet.xml</param-value>
   </context-param>
-  
+<!--以下为添加的缓存路径-->
+  <context-param>
+    <param-name>GEOWEBCACHE_CACHE_DIR</param-name>
+    <param-value>C:\GEOWEBCHCHE_CACHE_DIR</param-value>
+  </context-param>
+
   <filter>
     <filter-name>springSecurityFilterChain</filter-name>
     <filter-class>

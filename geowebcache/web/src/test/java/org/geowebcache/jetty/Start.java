@@ -31,14 +31,14 @@ public class Start {
             String portVariable = System.getProperty("jetty.port");
             int port = parsePort(portVariable);
             if (port <= 0)
-                port = 8080;
+                port = 8077;
             conn.setPort(port);
             conn.setAcceptQueueSize(100);
             jettyServer.setConnectors(new Connector[] { conn });
 
             WebAppContext wah = new WebAppContext();
             wah.setContextPath("/geowebcache");
-            wah.setWar("src/main/webapp");
+            wah.setWar("C:\\Users\\xuxia\\IdeaProjects\\geowebcache\\geowebcache\\web\\src\\main\\webapp");
             jettyServer.setHandler(wah);
             wah.setTempDirectory(new File("target/work"));
 
